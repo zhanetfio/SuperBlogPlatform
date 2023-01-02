@@ -7,7 +7,7 @@ import {getPostsTC} from "./post-reducer";
 export const Posts = () => {
 
     const dispatch = useAppDispatch()
-    const posts = useAppSelector(state => state.posts.items)
+    const posts = useAppSelector(state => state.blogs.items)
 
     useEffect(() => {
         dispatch(getPostsTC())
@@ -20,8 +20,8 @@ export const Posts = () => {
             {posts?.map((p) => {
                 return (
                     <PostInfo key={p.id}
-                              title={p.title}
-                              description={p.shortDescription}/>
+                              title={p.name}
+                              description={p.description}/>
                 )
             })}
             <button>Show more</button>

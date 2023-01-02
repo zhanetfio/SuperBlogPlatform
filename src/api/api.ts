@@ -12,6 +12,12 @@ export const postsAPI={
 
 }
 
+export const blogsAPI={
+    getBlogs(){
+        return instance.get<ResponseBlogsType>('blogs')
+    }
+}
+
 
 //types
 
@@ -31,4 +37,18 @@ export type ResponsePostsType={
     pageSize: number
     totalCount:number
     items:  PostType[]
+}
+export type ResponseBlogsType={
+    pagesCount:number
+    page:number
+    pageSize: number
+    totalCount:number
+    items: BlogType[]
+}
+export type BlogType={
+    id:string
+    name:string
+    websiteUrl:string
+    description:string
+    createdAt:string
 }

@@ -9,7 +9,6 @@ const initialState:ResponsePostsType={
     totalCount: 1,
     items: [] as PostType[]
 }
-//export type InitialStateType = typeof initialState
 
 export type PostActionsType= ReturnType<typeof setPosts>
 
@@ -26,7 +25,7 @@ export const postReducer=(state=initialState,action:PostActionsType):ResponsePos
 
 //actionCreators
 
-export const setPosts=(posts:PostType[])=>({type:'POST/SET-POSTS',payload: {posts}} as const)
+export const setPosts=(posts:PostType[])=>({type:'POST/SET-POSTS',payload: {posts: posts}} as const)
 
 //thunks
 
