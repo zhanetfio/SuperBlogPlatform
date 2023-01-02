@@ -1,0 +1,9 @@
+.navBlock{
+    width: 252px;
+    border: 2px solid;
+}
+.navItem{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
