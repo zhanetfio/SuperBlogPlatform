@@ -1,5 +1,6 @@
 .navBlock{
-    width: 252px;
+    box-sizing: content-box;
+    width: 590px;
     border: 2px solid;
 }
 .navItem{

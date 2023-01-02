@@ -1,0 +1,23 @@
+.blogWrapper{
+margin-left: 24px;
+}
+.pageTitle{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 20px;
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+.pageTitle::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: yellow;
+    top: 30px;
+    left: 0;
+}
+
+.button{}

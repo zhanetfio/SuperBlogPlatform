@@ -1,0 +1,33 @@
+.blogBlock{
+    display: flex;
+}
+
+.image{
+    margin-right: 12px;
+    margin-bottom: 11px;
+    border-radius: 75px;
+}
+.descriptionBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: justify;
+}
+.title{
+    margin-top: 17px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+.website{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.description{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 24px;
+}

@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {BlogInfo} from "./blogInfo/BlogInfo";
 import {useAppDispatch, useAppSelector} from "../../common/hooks/hooks";
 import {getBlogsTC} from "./blog-reducer";
+import style from './Blogs.module.css'
 
 export const Blogs = () => {
     const dispatch=useAppDispatch()
@@ -13,8 +14,8 @@ export const Blogs = () => {
     },[])
 
     return (
-        <div>
-            <div>Blogs</div>
+        <div className={style.blogWrapper}>
+            <div className={style.pageTitle}>Blogs</div>
             <Search/>
             <Sorter/>
             {blogs?.map((b)=>{
@@ -26,7 +27,7 @@ export const Blogs = () => {
                           )
             })}
            {/* <BlogInfo title={'The best blog in our village'} website={'Website: https://www.youtube.com/'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor '}/>*/}
-            <button>Show more</button>
+            <button className={style.button}>Show more</button>
         </div>
     );
 };
