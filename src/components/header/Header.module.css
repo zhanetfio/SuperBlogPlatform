@@ -1,4 +1,6 @@
-.headerBlock{
+.headerBlock {
+    min-width: 100vh;
     height: 60px;
     border: 2px solid;
+    text-align: justify;
 }

@@ -1,0 +1,35 @@
+.postWrapper {
+    min-width: 100%;
+}
+
+.pageTitle {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 20px;
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.pageTitle::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: yellow;
+    top: 30px;
+    left: 0;
+}
+
+.postBlock {
+    margin:30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.button{
+
+}

@@ -1,0 +1,29 @@
+.postInfoBlock{
+    width: 300px;
+    display: block;
+    margin: 10px 20px;
+}
+
+.image{
+    width: 300px!important;
+    height: 180px!important;
+}
+.title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.description{
+    text-align: justify;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 5px;
+}
+.createdAt{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-align: justify;
+}
