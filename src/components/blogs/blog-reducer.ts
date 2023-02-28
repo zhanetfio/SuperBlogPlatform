@@ -1,7 +1,14 @@
-import {blogsAPI, BlogType,  ResponseBlogsType} from "../../api/api";
+import {blogsAPI, BlogType, ResponseBlogsType} from "../../api/api";
 import {AppDispatch, AppThunk} from "../../store/store";
 
-const initialState:ResponseBlogsType={
+/*export type BlogType={
+    id?:string |undefined
+    name?:string
+    websiteUrl?:string
+    description?:string
+    createdAt?:string
+}*/
+const initialState: ResponseBlogsType = {
     pagesCount: 1,
     page: 1,
     pageSize: 1,
@@ -10,11 +17,10 @@ const initialState:ResponseBlogsType={
 }
 
 
-
-export const blogReducer=(state=initialState,action:BlogActionsType):ResponseBlogsType=>{
-    switch (action.type){
+export const blogReducer = (state = initialState, action: BlogActionsType): ResponseBlogsType => {
+    switch (action.type) {
         case 'BLOG/SET-BLOGS':
-            return{...state,items:action.payload.blogs}
+            return {...state, items: action.payload.blogs}
 
         default:
             return state
@@ -23,19 +29,19 @@ export const blogReducer=(state=initialState,action:BlogActionsType):ResponseBlo
 }
 //actionCreators
 
-export const setBlogs=(blogs:BlogType[])=>({type:'BLOG/SET-BLOGS',payload: {blogs: blogs}} as const)
+export const setBlogs = (blogs: BlogType[]) => ({type: 'BLOG/SET-BLOGS', payload: {blogs: blogs}} as const)
 
 //thunks
 
-export const getBlogsTC=():AppThunk=>async (dispatch:AppDispatch)=>{
+export const getBlogsTC = (): AppThunk => async (dispatch: AppDispatch) => {
 
     try {
         const res = await blogsAPI.getBlogs()
         dispatch(setBlogs(res.data.items))
-    }catch (e){
+    } catch (e) {
         console.log(e)
     }
 
 }
 
-export type BlogActionsType=ReturnType<typeof setBlogs>
+export type BlogActionsType = ReturnType<typeof setBlogs>

@@ -9,13 +9,13 @@ export const postsAPI={
     getPosts(){
         return instance.get<ResponsePostsType>('posts')
     }
-
 }
 
 export const blogsAPI={
     getBlogs(){
         return instance.get<ResponseBlogsType>('blogs')
     }
+
 }
 
 
