@@ -1,7 +1,7 @@
 import {applyMiddleware, combineReducers, legacy_createStore} from "redux";
-import {PostActionsType, postReducer} from "../components/posts/post-reducer";
+import {PostActionsType, postReducer} from "../features/posts/post-reducer";
 import thunk, {ThunkAction, ThunkDispatch} from "redux-thunk";
-import {BlogActionsType, blogReducer} from "../components/blogs/blog-reducer";
+import {BlogActionsType, blogReducer} from "../features/blogs/blog-reducer";
 
 const rootReducer = combineReducers({
     blogs:blogReducer,
