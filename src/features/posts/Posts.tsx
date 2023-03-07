@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
-import {Sorter} from "../blogs/Blogs";
 import {PostInfo} from "./postInfo/PostInfo";
 import {useAppDispatch, useAppSelector} from "../../common/hooks/hooks";
 import {getPostsTC} from "./post-reducer";
 import style from './Posts.module.css'
+import {SortSelect} from "../../common/components/SortSelect";
 
 export const Posts = () => {
 
@@ -17,7 +17,7 @@ export const Posts = () => {
     return (
         <div className={style.postWrapper}>
             <div className={style.pageTitle}>Posts</div>
-            <Sorter/>
+            <SortSelect/>
             <div className={style.postBlock}>
                 {posts?.map((p) => {
                     return (
