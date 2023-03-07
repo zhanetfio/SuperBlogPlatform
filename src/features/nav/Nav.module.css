@@ -1,0 +1,14 @@
+.navBlock {
+    /*box-sizing: content-box;*/
+    min-height: 100vh;
+    width: 403px;
+
+
+}
+
+.navItem {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
